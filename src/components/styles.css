@@ -1,6 +1,7 @@
 /* header styles */
 
 .header {
+  width: 100% !important;
   display: block;
   text-align: center;
   font-size: 30px;
@@ -36,14 +37,15 @@
 }
 
 .filters {
-  background-color: #343a40;
+  background-color: #121212;
   color: white;
   padding: 20px;
   display: flex;
   flex-direction: column;
   width: 20%;
   margin: 10px;
-  height: 86vh;
+  /* height: 86vh; */
+  /* min-height: 10vh; */
 }
 
 .filters > span {
