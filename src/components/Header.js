@@ -25,7 +25,7 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
       <Container>
         <Navbar.Brand>
-          <a href="https://intezar-dev.netlify.app/">Shopping-App</a>
+          <a href="/">Shopping-App</a>
         </Navbar.Brand>
         {useLocation().pathname.split("/")[1] !== "cart" && (
           <Navbar.Text className="search">
