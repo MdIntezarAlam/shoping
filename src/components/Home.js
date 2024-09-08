@@ -3,9 +3,7 @@ import Filters from "./Filters";
 import SingleProduct from "./SingleProduct";
 
 const Home = () => {
-  const {
-    state: { products },
-    productState: { sort, byStock, byFastDelivery, byRating, searchQuery },
+  const { state: { products },productState: { sort, byStock, byFastDelivery, byRating, searchQuery },
   } = CartState();
 
   const transformProducts = () => {

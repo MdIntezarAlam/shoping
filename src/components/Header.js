@@ -12,6 +12,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { CartState } from "../context/Context";
 import "./styles.css";
+import productImage from "../assets/product-img.jpg";
 
 const Header = () => {
   const {
@@ -24,7 +25,7 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
       <Container>
         <Navbar.Brand>
-          <a href="https://intnotes.netlify.app/">Shopping-App</a>
+          <a href="https://intezar-dev.netlify.app/">Shopping-App</a>
         </Navbar.Brand>
         {useLocation().pathname.split("/")[1] !== "cart" && (
           <Navbar.Text className="search">
@@ -56,7 +57,7 @@ const Header = () => {
                   {cart.map((prod) => (
                     <span className="cartitem" key={prod.id}>
                       <img
-                        src={prod.image}
+                        src={productImage}
                         className="cartItemImg"
                         alt={prod.name}
                       />

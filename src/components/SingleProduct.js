@@ -1,6 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 import { CartState } from "../context/Context";
 import Rating from "./Rating";
+import productImg from "../assets/product-img.jpg";
 
 const SingleProduct = ({ prod }) => {
   const {
@@ -8,10 +9,14 @@ const SingleProduct = ({ prod }) => {
     dispatch,
   } = CartState();
 
+  console.log("prod", prod.image);
+
   return (
     <div className="products">
       <Card>
-        <Card.Img variant="top" src={prod.image} alt={prod.name} />
+        <Card.Img variant="top"   style={{ height: "200px", objectFit: "cover" }}
+        
+        src={productImg} alt={prod.name} />
         <Card.Body>
           <Card.Title>{prod.name}</Card.Title>
           <Card.Subtitle style={{ paddingBottom: 10 }}>

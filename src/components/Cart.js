@@ -3,6 +3,7 @@ import { Button, Col, Form, Image, ListGroup, Row } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import { CartState } from "../context/Context";
 import Rating from "./Rating";
+import ProductImage from "../assets/product-img.jpg";
 
 const Cart = () => {
   const {
@@ -25,7 +26,7 @@ const Cart = () => {
             <ListGroup.Item key={prod.id}>
               <Row>
                 <Col md={2}>
-                  <Image src={prod.image} alt={prod.name} fluid rounded />
+                  <Image style={{ height: "100px", width: "100px" }} src={ProductImage} alt={"cart"} fluid rounded />
                 </Col>
                 <Col md={2}>
                   <span>{prod.name}</span>
