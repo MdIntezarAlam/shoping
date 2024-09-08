@@ -4,6 +4,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { CartState } from "../context/Context";
 import Rating from "./Rating";
 import ProductImage from "../assets/product-img.jpg";
+import {Link} from 'react-router-dom'
 
 const Cart = () => {
   const {
@@ -26,7 +27,13 @@ const Cart = () => {
             <ListGroup.Item key={prod.id}>
               <Row>
                 <Col md={2}>
-                  <Image style={{ height: "100px", width: "100px" }} src={ProductImage} alt={"cart"} fluid rounded />
+                  <Image
+                    style={{ height: "100px", width: "100px" }}
+                    src={ProductImage}
+                    alt={"cart"}
+                    fluid
+                    rounded
+                  />
                 </Col>
                 <Col md={2}>
                   <span>{prod.name}</span>
@@ -76,9 +83,9 @@ const Cart = () => {
       <div className="filters summary">
         <span className="title">Subtotal ({cart.length}) items</span>
         <span style={{ fontWeight: 700, fontSize: 20 }}>Total: ₹ {total}</span>
-        <Button type="button" disabled={cart.length === 0}>
-          Proceed to Checkout
-        </Button>
+        <Link to="/checkout">
+          <Button>Proceed to Checkout</Button>
+        </Link>
       </div>
     </div>
   );
